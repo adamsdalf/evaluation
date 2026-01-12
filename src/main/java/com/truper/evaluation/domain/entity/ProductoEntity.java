@@ -8,11 +8,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "productos")
+@Setter
+@Getter
+@NoArgsConstructor
 public class ProductoEntity {
 
     @Id
@@ -23,7 +29,7 @@ public class ProductoEntity {
     @JoinColumn(name = "orden_id")
     private OrdenEntity ordenEntity;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String codigo;
 
     @Column(nullable = false)

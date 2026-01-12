@@ -13,15 +13,10 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProductoDto {
-
-    private Integer idProducto;
+public class ProductoUpdateRequest {
 
     @NotBlank
     private String codigo;
-
-    @NotBlank
-    private String descripcion;
 
     @NotNull
     private BigDecimal precio;

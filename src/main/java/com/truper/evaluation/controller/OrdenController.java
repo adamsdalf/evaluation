@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("truper/api/v1/ordenes")
+@RequestMapping("v1/ordenes")
 public class OrdenController {
 
     private OrdenService ordenService;
@@ -28,7 +28,7 @@ public class OrdenController {
 
     @GetMapping("/{id}")
     public OrdenResponse find(@PathVariable Integer id){
-        return null;
+        return ordenService.find(id) ;
     }
 
 
